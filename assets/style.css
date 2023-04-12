@@ -1,0 +1,12 @@
+header {
+    font-size: 36px;
+    background-color: rgb(57, 130, 176);
+    color: white;
+    padding: 10px;
+}
+
+#search-button {
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: rgb(255, 183, 0);
+}
