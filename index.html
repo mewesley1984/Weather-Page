@@ -9,19 +9,23 @@
     <title>Document</title>
 </head>
 <body>
-    <header class="row justify-content-center">
-        <div>Weather Dashboard</div>
+    <header class='d-flex justify-content-center'>
+          <div>Weather Dashboard</div>
     </header>
-    <main class="container">
-        <section class="cities">
+
+    <main class="d-flex flex-start">
+        <section id="cities" class="col-4 flex-column align-center">
             <h2>Search for a City:</h2>
             <input id="city-search">
             <button id="search-button">Search</button>
-            <div id="city1"></div>
-            <div id="city2"></div>
-            <div id="city3"></div>
-            <div id="city4"></div>
-            <div id="city5"></div>
+            <div id="saved-cities"></div>
+        </section>
+        <section class="col-9">
+            <div id="current-weather-city"></div>
+            <div id="current-weather-temp"></div>
+            <div id="current-weather-wind"></div>
+            <div id="current-weather-humidity"></div>
+            <div id="forecast"></div>
         </section>
     </main>
 
