@@ -1,6 +1,9 @@
 var searchFormEl=document.getElementById("city-search")
 var searchBtnEl=document.getElementById("search-button")
-
+var currentCityEl=document.getElementById("current-weather-city")
+var currentTempEl=document.getElementById("current-weather-temp")
+var currentWindEl=document.getElementById("current-weather-wind")
+var currentHumidityEl=document.getElementById("current-weather-humidity")
 
 function weatherForecast(city) {
     
@@ -12,8 +15,11 @@ fetch(apiKey)
 })
 .then(function (data) {
     console.log(data)
-    console.log(data.list[0].main.temp)
-        
+   
+    currentCityEl.textContent= data.city.name
+    currentTempEl.textContent="Current Temperature:"  +  data.list[0].main.temp 
+    currentWindEl.textContent="Wind Speed:" +  data.list[0].wind.speed
+    currentHumidityEl.textContent="Humidity:"  +  data.list[0].main.humidity 
 })
 
 }
