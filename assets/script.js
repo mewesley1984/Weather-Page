@@ -25,7 +25,7 @@ function displayForecast(data){
 
     //for(VARIABLE; CONDITION; AFTER)
     var day = 1
-    for (var i=8; i <= 40; i += 8) {
+    for (var i=7; i <= 40; i += 8) {
         console.log("Day after >>>", data.list[i].main.temp)
         var currentTempEl = document.getElementById("day"+ day+"temp")
         currentTempEl.textContent = data.list[i].main.temp
@@ -40,7 +40,7 @@ function displayForecast(data){
 
 function displayCurrent(data){
     var weather = data.list[0]
-    currentCityEl.textContent= weather.city.name
+    currentCityEl.textContent= data.city.name
     currentTempEl.textContent="Current Temperature: "  +  weather.main.temp 
     currentWindEl.textContent="Wind Speed: " +  weather.wind.speed
     currentHumidityEl.textContent="Humidity: "  +  weather.main.humidity 
@@ -61,10 +61,3 @@ searchBtnEl.addEventListener('click',searchResult)
 
 
 
- //           0       1       2
-var arr = ["bob", "sally", "steve", "mary"]
-//for(VARIABLE; CONDITION; AFTER)
-for(var i = 0; i < arr.length; i++ ){
-    console.log(i)
-    console.log(arr[i])
-}
