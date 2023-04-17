@@ -7,6 +7,9 @@ var currentHumidityEl=document.getElementById("current-weather-humidity")
 var forecastEl = document.getElementById("forecast")
 var savedCitiesEl= document.getElementById("saved-cities")
 
+
+displaySavedCities(JSON.parse(localStorage.getItem('saved-cities') || "[]")) 
+
 function getWeather(city) {
     var apiKey=`https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=7a86c802b697310f6f3bd72dc88c3de5&units=imperial`
 
