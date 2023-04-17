@@ -10,3 +10,8 @@ header {
     padding-right: 20px;
     background-color: rgb(255, 183, 0);
 }
+
+.current-weather {
+    font-size: 36px;
+    background-color: rgb(255, 213, 0);
+}
